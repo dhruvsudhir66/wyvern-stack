@@ -169,8 +169,8 @@ export const projects: Project[] = [
   url: "https://nexa-erp.wyvernstack.com/",
 },
  {
-  slug: "maison-boutique",
-  title: "Maison Boutique Boutique",
+  slug: "elan-boutique",
+  title: "Elan Boutique",
   category: "Web Design & Development",
   metrics: "Modern Fashion for Modern People",
   bg: "bg-[#171a19]",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
-  url: "https://maison-boutique.wyvernstack.com/",
+  url: "https://elan.wyvernstack.com/",
 },
 {
   slug: "dreams-restaurant",
