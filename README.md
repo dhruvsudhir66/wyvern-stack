@@ -35,5 +35,5 @@ npm run dev
 ```
 
 ```
-Test
+Tests
 ```
