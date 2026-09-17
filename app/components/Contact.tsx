@@ -229,8 +229,8 @@ export default function Contact() {
                 <ContactLine
                   icon={<Mail size={16} />}
                   label="Email"
-                  value="wyvernstack.solutions@gmail.com"
-                  href="mailto:wyvernstack.solutions@gmail.com"
+                  value="wyvernstack@gmail.com"
+                  href="mailto:wyvernstack@gmail.com"
                 />
 
                 <ContactLine
