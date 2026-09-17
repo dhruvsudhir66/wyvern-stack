@@ -133,7 +133,7 @@ export const projects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
-  url: "https://lumina.aevonsolutions.co.in/"
+  url: "https://lumina.wyvernstack.com/"
 },
  {
   slug: "smile-care",
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     "CSS",
     "Javascript"
   ],
-  url: "https://smilecare.aevonsolutions.co.in/",
+  url: "https://smilecare.wyvernstack.com/",
 },
  {
   slug: "nexa-erp",
@@ -166,11 +166,11 @@ export const projects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
-  url: "https://nexaerp.aevonsolutions.co.in/",
+  url: "https://nexa-erp.wyvernstack.com/",
 },
  {
-  slug: "elan-botique",
-  title: "Elan Botique",
+  slug: "maison-boutique",
+  title: "Maison Boutique Boutique",
   category: "Web Design & Development",
   metrics: "Modern Fashion for Modern People",
   bg: "bg-[#171a19]",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
-  url: "https://elan.aevonsolutions.co.in/",
+  url: "https://maison-boutique.wyvernstack.com/",
 },
 {
   slug: "dreams-restaurant",
@@ -200,7 +200,7 @@ export const projects: Project[] = [
     "Javascript",
     "Bootstrap",
   ],
-  url: "https://dreams-restaurant.aevonsolutions.co.in/",
+  url: "https://dreams-restaurant.wyvernstack.com/",
 },
 ];
 
@@ -220,7 +220,7 @@ export const featuredProjects: Project[] = [
     "Tailwind CSS",
     "Framer Motion",
   ],
-  url: "https://lumina.aevonsolutions.co.in/"
+  url: "https://lumina.wyvernstack.com/"
 },
 {
   slug: "dreams-restaurant",
@@ -237,7 +237,7 @@ export const featuredProjects: Project[] = [
     "Javascript",
     "Bootstrap",
   ],
-  url: "https://dreams-restaurant.aevonsolutions.co.in/",
+  url: "https://dreams-restaurant.wyvernstack.com/",
 },
 ]
 
