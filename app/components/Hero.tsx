@@ -95,7 +95,7 @@ export default function Hero() {
                   </p>
 
                   <p className="mt-0.5 text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                    Technology · Design · Innovation
+                    Technology · Design · Implementation
                 </p>
               </div>
             </motion.div>
