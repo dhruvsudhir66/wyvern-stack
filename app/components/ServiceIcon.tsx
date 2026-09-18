@@ -1,15 +1,26 @@
-import { Bot, Code2, Layers, Zap } from "lucide-react";
-import type { Service } from "@/app/lib/data";
+import { Bot, Code2, Layers3, Zap, Smartphone, Boxes } from "lucide-react";
+
+type ServiceIconProps = {
+  type: "bot" | "code" | "layers" | "zap" | "smartphone" | "boxes";
+  size?: number;
+  className?: string;
+};
+
+const icons = {
+  bot: Bot,
+  code: Code2,
+  layers: Layers3,
+  zap: Zap,
+  smartphone: Smartphone,
+  boxes: Boxes,
+};
 
 export default function ServiceIcon({
   type,
   size = 24,
-}: {
-  type: Service["icon"];
-  size?: number;
-}) {
-  if (type === "bot") return <Bot size={size} />;
-  if (type === "code") return <Code2 size={size} />;
-  if (type === "layers") return <Layers size={size} />;
-  return <Zap size={size} />;
+  className,
+}: ServiceIconProps) {
+  const Icon = icons[type];
+
+  return <Icon size={size} className={className} aria-hidden="true" />;
 }

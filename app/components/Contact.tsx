@@ -24,7 +24,10 @@ export default function Contact() {
           HERO
       ====================================================== */}
 
-      <section className="relative isolate min-h-[78vh] overflow-hidden bg-[#08090D] text-white">
+      <section
+        aria-labelledby="contact-heading"
+        className="relative isolate min-h-[78vh] overflow-hidden bg-[#08090D] text-white"
+      >
         {/* Ambient glow */}
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
@@ -33,6 +36,7 @@ export default function Contact() {
             duration: 1.6,
             ease: [0.22, 1, 0.36, 1],
           }}
+          aria-hidden="true"
           className="pointer-events-none absolute -right-40 top-0 h-[38rem] w-[38rem] rounded-full bg-[#C81C33]/20 blur-[140px]"
         />
 
@@ -40,11 +44,13 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
+          aria-hidden="true"
           className="pointer-events-none absolute -left-40 bottom-[-10rem] h-[30rem] w-[30rem] rounded-full bg-[#C81C33]/10 blur-[120px]"
         />
 
         {/* Subtle grid */}
         <div
+          aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.035]"
           style={{
             backgroundImage:
@@ -62,6 +68,7 @@ export default function Contact() {
             delay: 0.2,
             ease: [0.22, 1, 0.36, 1],
           }}
+          aria-hidden="true"
           className="pointer-events-none absolute right-[8%] top-[22%] hidden h-56 w-56 rounded-full border border-white/[0.06] lg:block"
         >
           <div className="absolute inset-6 rounded-full border border-[#C81C33]/20" />
@@ -79,7 +86,7 @@ export default function Contact() {
             className="flex items-center justify-between border-b border-white/10 pb-5"
           >
             <div className="flex items-center gap-3">
-              <span className="relative flex h-2 w-2">
+              <span aria-hidden="true" className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#C81C33] opacity-50" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#C81C33]" />
               </span>
@@ -106,6 +113,7 @@ export default function Contact() {
             </motion.p>
 
             <motion.h1
+              id="contact-heading"
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
@@ -115,10 +123,9 @@ export default function Contact() {
               }}
               className="max-w-6xl text-[clamp(3.7rem,8.5vw,9rem)] font-extrabold leading-[0.86] tracking-[-0.07em]"
             >
-              Let&apos;s make
+              Let&apos;s build
               <br />
-              something{" "}
-              <span className="text-[#C81C33]">real.</span>
+              something <span className="text-[#C81C33]">worth shipping.</span>
             </motion.h1>
 
             <motion.p
@@ -127,9 +134,9 @@ export default function Contact() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-10 max-w-xl text-base leading-7 text-white/45 sm:text-lg"
             >
-              Have a product to build, a system to modernize, or an idea worth
-              exploring? Start the conversation and let&apos;s figure out
-              what comes next.
+              Have a website, SaaS product, digital platform, or intelligent
+              system to build? Tell us what you&apos;re working on and
+              we&apos;ll help define the right next step.
             </motion.p>
           </div>
 
@@ -141,10 +148,10 @@ export default function Contact() {
             className="mt-20 flex items-end justify-between border-t border-white/10 pt-6"
           >
             <div className="grid grid-cols-2 gap-x-10 gap-y-4 sm:grid-cols-4 sm:gap-x-16">
-              <HeroMeta label="Web" />
-              <HeroMeta label="Mobile" />
-              <HeroMeta label="AI & Automation" />
-              <HeroMeta label="Business Systems" />
+              <HeroMeta label="Web Platforms" />
+              <HeroMeta label="SaaS Products" />
+              <HeroMeta label="AI Integration" />
+              <HeroMeta label="Digital Engineering" />
             </div>
 
             <div className="hidden items-center gap-3 text-white/25 sm:flex">
@@ -152,7 +159,7 @@ export default function Contact() {
                 Scroll
               </span>
 
-              <ArrowDown size={14} />
+              <ArrowDown size={14} aria-hidden="true" />
             </div>
           </motion.div>
         </div>
@@ -162,8 +169,14 @@ export default function Contact() {
           PROJECT BRIEF — LIGHT
       ====================================================== */}
 
-      <section className="relative overflow-hidden bg-[#F4F2ED] text-[#0B0F19]">
-        <div className="pointer-events-none absolute right-[-12rem] top-[-10rem] h-[32rem] w-[32rem] rounded-full bg-[#C81C33]/5 blur-[130px]" />
+      <section
+        aria-labelledby="project-brief-heading"
+        className="relative overflow-hidden bg-[#F4F2ED] text-[#0B0F19]"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-[-12rem] top-[-10rem] h-[32rem] w-[32rem] rounded-full bg-[#C81C33]/5 blur-[130px]"
+        />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           {/* Section heading */}
@@ -174,15 +187,12 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="mb-20 max-w-3xl"
           >
-            <div className="flex items-center gap-3">
-              <span className="h-px w-8 bg-[#C81C33]" />
+            <SectionLabel>Project Brief</SectionLabel>
 
-              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-black/35">
-                Project Brief
-              </span>
-            </div>
-
-            <h2 className="mt-7 text-[clamp(3rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.06em]">
+            <h2
+              id="project-brief-heading"
+              className="mt-7 text-[clamp(3rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.06em]"
+            >
               Start with
               <br />
               the <span className="text-[#C81C33]">idea.</span>
@@ -206,6 +216,7 @@ export default function Contact() {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.7 }}
               className="lg:col-span-4"
+              aria-label="Wyvernstack contact information"
             >
               <div className="border-t border-black/10 pt-6">
                 <div className="flex items-center justify-between">
@@ -220,34 +231,34 @@ export default function Contact() {
               </div>
 
               <p className="mt-8 max-w-sm text-sm leading-7 text-black/45">
-                We work across digital products, business platforms,
-                intelligent automation, and modern software infrastructure.
+                We work across digital products, SaaS platforms, intelligent
+                automation, and modern software infrastructure.
               </p>
 
               {/* Contact information */}
               <div className="mt-12">
                 <ContactLine
-                  icon={<Mail size={16} />}
+                  icon={<Mail size={16} aria-hidden="true" />}
                   label="Email"
                   value="wyvernstack@gmail.com"
                   href="mailto:wyvernstack@gmail.com"
                 />
 
                 <ContactLine
-                  icon={<Phone size={16} />}
+                  icon={<Phone size={16} aria-hidden="true" />}
                   label="Phone"
                   value="+91 7012524123"
                   href="tel:+917012524123"
                 />
 
                 <ContactLine
-                  icon={<MapPin size={16} />}
+                  icon={<MapPin size={16} aria-hidden="true" />}
                   label="Studio"
                   value="Bengaluru, Karnataka, India"
                 />
 
                 <ContactLine
-                  icon={<Clock3 size={16} />}
+                  icon={<Clock3 size={16} aria-hidden="true" />}
                   label="Availability"
                   value="Mon – Fri · 9:00 AM – 6:00 PM"
                 />
@@ -275,17 +286,24 @@ export default function Contact() {
           PROCESS — DARK
       ====================================================== */}
 
-      <section className="relative overflow-hidden bg-[#08090D] text-white">
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[#C81C33]/10 blur-[140px]" />
+      <section
+        aria-labelledby="contact-process-heading"
+        className="relative overflow-hidden bg-[#08090D] text-white"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-[#C81C33]/10 blur-[140px]"
+        />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
           <div className="grid gap-16 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">
-              <SectionLabel dark>
-                What happens next
-              </SectionLabel>
+              <SectionLabel dark>What happens next</SectionLabel>
 
-              <h2 className="mt-7 text-[clamp(2.8rem,5vw,5rem)] font-extrabold leading-[0.92] tracking-[-0.06em]">
+              <h2
+                id="contact-process-heading"
+                className="mt-7 text-[clamp(2.8rem,5vw,5rem)] font-extrabold leading-[0.92] tracking-[-0.06em]"
+              >
                 A simple
                 <br />
                 path from
@@ -300,25 +318,31 @@ export default function Contact() {
             </div>
 
             <div className="lg:col-span-7">
-              <div className="border-t border-white/10">
-                <ProcessStep
-                  number="01"
-                  title="We review"
-                  text="We go through your brief and identify the key requirements, opportunities, and constraints."
-                />
+              <ol className="border-t border-white/10">
+                <li>
+                  <ProcessStep
+                    number="01"
+                    title="We review"
+                    text="We go through your brief and identify the key requirements, opportunities, and constraints."
+                  />
+                </li>
 
-                <ProcessStep
-                  number="02"
-                  title="We respond"
-                  text="We get back to you within 24 hours with questions, recommendations, and a clear direction."
-                />
+                <li>
+                  <ProcessStep
+                    number="02"
+                    title="We respond"
+                    text="We get back to you within 24 hours with questions, recommendations, and a clear direction."
+                  />
+                </li>
 
-                <ProcessStep
-                  number="03"
-                  title="We explore"
-                  text="We schedule a discovery conversation to understand the business, users, product, and technical requirements."
-                />
-              </div>
+                <li>
+                  <ProcessStep
+                    number="03"
+                    title="We explore"
+                    text="We schedule a discovery conversation to understand the business, users, product, and technical requirements."
+                  />
+                </li>
+              </ol>
             </div>
           </div>
         </div>
@@ -328,8 +352,14 @@ export default function Contact() {
           FINAL CTA — LIGHT
       ====================================================== */}
 
-      <section className="relative overflow-hidden bg-[#F4F2ED] text-[#0B0F19]">
-        <div className="pointer-events-none absolute bottom-[-15rem] right-[-10rem] h-[30rem] w-[30rem] rounded-full bg-[#C81C33]/5 blur-[120px]" />
+      <section
+        aria-labelledby="contact-cta-heading"
+        className="relative overflow-hidden bg-[#F4F2ED] text-[#0B0F19]"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-[-15rem] right-[-10rem] h-[30rem] w-[30rem] rounded-full bg-[#C81C33]/5 blur-[120px]"
+        />
 
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-28">
           <div className="border-t border-black/10 pt-8">
@@ -339,7 +369,10 @@ export default function Contact() {
                   One more thing
                 </p>
 
-                <h2 className="mt-6 max-w-4xl text-[clamp(3rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.06em]">
+                <h2
+                  id="contact-cta-heading"
+                  className="mt-6 max-w-4xl text-[clamp(3rem,6vw,6rem)] font-extrabold leading-[0.9] tracking-[-0.06em]"
+                >
                   Good ideas
                   <br />
                   deserve to <span className="text-[#C81C33]">move.</span>
@@ -351,9 +384,8 @@ export default function Contact() {
                 className="group inline-flex shrink-0 items-center gap-4 text-xs font-bold uppercase tracking-[0.16em]"
               >
                 Explore Our Work
-
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0B0F19] text-white transition-transform duration-300 group-hover:translate-x-1">
-                  <ArrowUpRight size={17} />
+                  <ArrowUpRight size={17} aria-hidden="true" />
                 </span>
               </Link>
             </div>
@@ -363,7 +395,6 @@ export default function Contact() {
     </main>
   );
 }
-
 
 /* =========================================================
    CONTACT FORM
@@ -377,16 +408,17 @@ function ContactForm() {
       {/* Form top metadata */}
       <div className="mb-10 flex items-center justify-between border-b border-black/10 pb-5">
         <div className="flex items-center gap-3">
-          <span className="h-2 w-2 rounded-full bg-[#C81C33]" />
+          <span
+            aria-hidden="true"
+            className="h-2 w-2 rounded-full bg-[#C81C33]"
+          />
 
           <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-black/35">
             Tell us about it
           </span>
         </div>
 
-        <span className="font-mono text-[9px] text-black/20">
-          FORM_01
-        </span>
+        <span className="font-mono text-[9px] text-black/20">FORM_01</span>
       </div>
 
       <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2">
@@ -395,6 +427,7 @@ function ContactForm() {
           id="name"
           name="name"
           placeholder="Alex Morgan"
+          autoComplete="name"
         />
 
         <Field
@@ -403,6 +436,7 @@ function ContactForm() {
           name="email"
           type="email"
           placeholder="alex@company.com"
+          autoComplete="email"
         />
 
         <Field
@@ -411,6 +445,7 @@ function ContactForm() {
           name="company"
           placeholder="Your company"
           required={false}
+          autoComplete="organization"
         />
 
         {/* Project Type */}
@@ -433,47 +468,36 @@ function ContactForm() {
                 Select a service
               </option>
 
-              <option value="Web Development">
-                Web Development
-              </option>
+              <option value="Web Platforms">Web Platforms</option>
 
-              <option value="Mobile Development">
-                Mobile Development
-              </option>
+              <option value="SaaS Products">SaaS Products</option>
 
-              <option value="UI/UX Design">
-                UI/UX Design
-              </option>
+              <option value="AI Integration">AI Integration</option>
 
-              <option value="Backend Development">
-                Backend Development
-              </option>
+              <option value="Design Systems">Design Systems</option>
 
-              <option value="Data & Analytics">
-                Data & Analytics
-              </option>
+              <option value="Digital Engineering">Digital Engineering</option>
 
-              <option value="E-commerce Solutions">
-                E-commerce Solutions
-              </option>
+              <option value="Business Systems">Business Systems</option>
 
-              <option value="Other">
-                Other
-              </option>
+              <option value="Other">Other</option>
             </select>
 
-            <span className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-xs text-black/25 transition-colors peer-focus:text-[#C81C33]">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-xs text-black/25 transition-colors peer-focus:text-[#C81C33]"
+            >
               ↓
             </span>
 
-            <span className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#C81C33] transition-all duration-500 peer-focus:w-full" />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#C81C33] transition-all duration-500 peer-focus:w-full"
+            />
           </div>
         </div>
 
-        {/* =================================================
-            DETAILS
-        ================================================= */}
-
+        {/* Details */}
         <div className="sm:col-span-2">
           <div className="mb-3 flex items-center justify-between">
             <label
@@ -483,9 +507,7 @@ function ContactForm() {
               Project Details
             </label>
 
-            <span className="font-mono text-[9px] text-black/20">
-              REQUIRED
-            </span>
+            <span className="font-mono text-[9px] text-black/20">REQUIRED</span>
           </div>
 
           <div className="relative">
@@ -494,14 +516,21 @@ function ContactForm() {
               name="details"
               required
               rows={8}
-              placeholder="Tell us what you're trying to build, improve, or solve..."
+              maxLength={3000}
+              placeholder="Tell us about your business, what you want to build, and what you need the product to achieve..."
               className="w-full resize-none border border-black/[0.12] bg-white/50 px-5 py-5 text-sm leading-7 text-[#0B0F19] outline-none placeholder:text-black/25 transition-all duration-300 hover:border-black/20 focus:border-[#C81C33] focus:bg-white focus:shadow-[0_0_0_3px_rgba(200,28,51,0.05)]"
             />
 
             {/* Corner markers */}
-            <span className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l border-t border-[#C81C33]/50" />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute left-0 top-0 h-3 w-3 border-l border-t border-[#C81C33]/50"
+            />
 
-            <span className="pointer-events-none absolute bottom-0 right-0 h-4 w-4 border-b border-r border-[#C81C33]/50" />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute bottom-0 right-0 h-4 w-4 border-b border-r border-[#C81C33]/50"
+            />
           </div>
         </div>
 
@@ -510,6 +539,8 @@ function ContactForm() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
+            role={state.success ? "status" : "alert"}
+            aria-live="polite"
             className={`flex items-start gap-3 border px-4 py-4 text-sm font-medium sm:col-span-2 ${
               state.success
                 ? "border-emerald-200 bg-emerald-50 text-emerald-700"
@@ -520,6 +551,7 @@ function ContactForm() {
               <CheckCircle2
                 size={17}
                 className="mt-0.5 shrink-0"
+                aria-hidden="true"
               />
             )}
 
@@ -532,7 +564,10 @@ function ContactForm() {
           <div className="flex flex-col gap-6 border-t border-black/10 pt-7 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                <span
+                  aria-hidden="true"
+                  className="h-1.5 w-1.5 rounded-full bg-emerald-500"
+                />
 
                 <p className="text-xs font-semibold text-black/55">
                   Usually responds within 24 hours.
@@ -549,7 +584,10 @@ function ContactForm() {
               type="submit"
               className="group relative flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden bg-[#C81C33] px-8 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-[#A11327] hover:shadow-[0_15px_35px_rgba(200,28,51,0.2)] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
             >
-              <span className="absolute inset-0 translate-y-full bg-white/10 transition-transform duration-500 group-hover:translate-y-0" />
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 translate-y-full bg-white/10 transition-transform duration-500 group-hover:translate-y-0"
+              />
 
               <span className="relative">
                 {isPending ? "Sending" : "Send Project Brief"}
@@ -560,11 +598,13 @@ function ContactForm() {
                   <Loader2
                     size={16}
                     className="animate-spin"
+                    aria-hidden="true"
                   />
                 ) : (
                   <Send
                     size={16}
                     className="transition-transform duration-300 group-hover:translate-x-1"
+                    aria-hidden="true"
                   />
                 )}
               </span>
@@ -580,7 +620,6 @@ function ContactForm() {
   );
 }
 
-
 /* =========================================================
    FIELD
 ========================================================= */
@@ -592,6 +631,7 @@ function Field({
   placeholder,
   type = "text",
   required = true,
+  autoComplete,
 }: {
   label: string;
   id: string;
@@ -599,6 +639,7 @@ function Field({
   placeholder: string;
   type?: string;
   required?: boolean;
+  autoComplete?: string;
 }) {
   return (
     <motion.div
@@ -627,15 +668,18 @@ function Field({
           name={name}
           required={required}
           placeholder={placeholder}
+          autoComplete={autoComplete}
           className="peer w-full border-0 border-b border-black/15 bg-transparent px-0 py-3 text-sm font-medium text-[#0B0F19] outline-none placeholder:text-black/20 transition-colors duration-300 focus:border-[#C81C33]"
         />
 
-        <span className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#C81C33] transition-all duration-500 peer-focus:w-full" />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-0 h-px w-0 bg-[#C81C33] transition-all duration-500 peer-focus:w-full"
+        />
       </div>
     </motion.div>
   );
 }
-
 
 /* =========================================================
    CONTACT LINE
@@ -655,24 +699,21 @@ function ContactLine({
   const content = (
     <div className="group flex items-center justify-between border-b border-black/10 py-5">
       <div className="flex items-center gap-4">
-        <span className="text-[#C81C33]">
-          {icon}
-        </span>
+        <span className="text-[#C81C33]">{icon}</span>
 
         <div>
           <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-black/30">
             {label}
           </p>
 
-          <p className="mt-1 text-sm font-medium text-black/65">
-            {value}
-          </p>
+          <p className="mt-1 text-sm font-medium text-black/65">{value}</p>
         </div>
       </div>
 
       {href && (
         <ArrowUpRight
           size={15}
+          aria-hidden="true"
           className="text-black/20 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#C81C33]"
         />
       )}
@@ -682,12 +723,11 @@ function ContactLine({
   if (!href) return content;
 
   return (
-    <a href={href} className="block">
+    <a href={href} className="block" aria-label={`${label}: ${value}`}>
       {content}
     </a>
   );
 }
-
 
 /* =========================================================
    PROCESS STEP
@@ -714,17 +754,12 @@ function ProcessStep({
         {number}
       </span>
 
-      <h3 className="text-xl font-bold tracking-tight">
-        {title}
-      </h3>
+      <h3 className="text-xl font-bold tracking-tight">{title}</h3>
 
-      <p className="max-w-xl text-sm leading-7 text-white/40">
-        {text}
-      </p>
+      <p className="max-w-xl text-sm leading-7 text-white/40">{text}</p>
     </motion.div>
   );
 }
-
 
 /* =========================================================
    HERO META
@@ -737,13 +772,10 @@ function HeroMeta({ label }: { label: string }) {
         Capability
       </p>
 
-      <p className="mt-2 text-xs font-medium text-white/60">
-        {label}
-      </p>
+      <p className="mt-2 text-xs font-medium text-white/60">{label}</p>
     </div>
   );
 }
-
 
 /* =========================================================
    SECTION LABEL
@@ -762,7 +794,7 @@ function SectionLabel({
         dark ? "text-white/40" : "text-black/35"
       }`}
     >
-      <span className="h-px w-8 bg-[#C81C33]" />
+      <span aria-hidden="true" className="h-px w-8 bg-[#C81C33]" />
 
       {children}
     </div>

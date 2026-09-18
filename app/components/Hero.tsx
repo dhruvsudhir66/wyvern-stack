@@ -16,7 +16,10 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-[#F8FAFC]">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative isolate overflow-hidden bg-[#F8FAFC]"
+    >
       {/* =====================================================
           BACKGROUND
       ===================================================== */}
@@ -81,33 +84,31 @@ export default function Hero() {
               className="mb-7 flex items-center gap-3"
             >
               <div className="relative flex h-8 w-8 items-center justify-center rounded-full border border-[#C81C33]/30 bg-white shadow-sm">
-                <Sparkles
-                  size={14}
-                  className="text-[#C81C33]"
-                />
+                <Sparkles size={14} className="text-[#C81C33]" />
 
                 <span className="absolute inset-0 animate-ping rounded-full border border-[#C81C33]/20" />
               </div>
 
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C81C33]">
-                    WYVERNSTACK
-                  </p>
+                  WYVERNSTACK
+                </p>
 
-                  <p className="mt-0.5 text-[9px] uppercase tracking-[0.18em] text-slate-400">
-                    Technology · Design · Implementation
+                <p className="mt-0.5 text-[9px] uppercase tracking-[0.18em] text-slate-400">
+                  Technology · Design · Implementation
                 </p>
               </div>
             </motion.div>
 
             {/* Main headline */}
-            <h1 className="max-w-4xl text-[3.5rem] font-extrabold leading-[0.95] tracking-[-0.055em] text-[#0B0F19] sm:text-6xl md:text-7xl lg:text-[5.8rem]">
-              We build what
+            <h1
+              id="hero-heading"
+              className="max-w-4xl text-[3.5rem] font-extrabold leading-[0.95] tracking-[-0.055em] text-[#0B0F19] sm:text-6xl md:text-7xl lg:text-[5.8rem]"
+            >
+              We build digital products
               <br />
-
               <span className="relative inline-block">
-                comes next.
-
+                that move businesses forward.
                 <motion.span
                   initial={{ width: 0 }}
                   animate={{ width: "72%" }}
@@ -132,7 +133,9 @@ export default function Hero() {
               }}
               className="mt-8 max-w-xl text-base leading-7 text-slate-500 sm:text-lg"
             >
-              Wyvernstack is a digital technology studio building products, platforms, and experiences that move businesses forward.
+              Wyvernstack is a digital technology studio designing and
+              developing high-performance websites, SaaS products, digital
+              platforms, and intelligent systems for businesses.
             </motion.p>
 
             {/* Buttons */}
@@ -151,7 +154,6 @@ export default function Hero() {
                 className="group inline-flex items-center gap-3 rounded-xl bg-[#C81C33] px-6 py-3.5 text-sm font-semibold text-white shadow-xl shadow-[#C81C33]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-[#A11327]"
               >
                 Start a Project
-
                 <ArrowUpRight
                   size={17}
                   className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -163,7 +165,6 @@ export default function Hero() {
                 className="group inline-flex items-center gap-3 rounded-xl border border-slate-200 bg-white/80 px-6 py-3.5 text-sm font-semibold text-[#0B0F19] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white"
               >
                 Explore Work
-
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-300 group-hover:translate-x-1"
@@ -181,20 +182,11 @@ export default function Hero() {
               }}
               className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-slate-200 pt-5"
             >
-              <MetaItem
-                label="Discovery"
-                value="Strategy & Product"
-              />
+              <MetaItem label="Discovery" value="Strategy & Product" />
 
-              <MetaItem
-                label="Creation"
-                value="Design & Engineering"
-              />
+              <MetaItem label="Creation" value="Design & Engineering" />
 
-              <MetaItem
-                label="Evolution"
-                value="Scale & Automation"
-              />
+              <MetaItem label="Evolution" value="Scale & Automation" />
             </motion.div>
           </motion.div>
 
@@ -203,6 +195,7 @@ export default function Hero() {
           ================================================= */}
 
           <motion.div
+            aria-hidden="true"
             initial={{ opacity: 0, scale: 0.92, y: 30 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{
@@ -285,10 +278,7 @@ export default function Hero() {
                   }}
                   className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#C81C33]"
                 >
-                  <Cpu
-                    size={28}
-                    className="text-white"
-                  />
+                  <Cpu size={28} className="text-white" />
 
                   <span className="absolute inset-[-7px] rounded-full border border-[#C81C33]/50" />
                 </motion.div>
@@ -360,10 +350,7 @@ export default function Hero() {
                     Processing
                   </span>
 
-                  <Activity
-                    size={13}
-                    className="text-[#C81C33]"
-                  />
+                  <Activity size={13} className="text-[#C81C33]" />
                 </div>
 
                 <div className="mt-3 flex h-8 items-end gap-1">
@@ -384,22 +371,18 @@ export default function Hero() {
                           delay: index * 0.08,
                         }}
                         className={`flex-1 rounded-sm ${
-                          index === 9
-                            ? "bg-[#C81C33]"
-                            : "bg-white/20"
+                          index === 9 ? "bg-[#C81C33]" : "bg-white/20"
                         }`}
                       />
-                    )
+                    ),
                   )}
                 </div>
 
                 <div className="mt-2 flex items-center justify-between">
-                  <span className="text-[9px] text-slate-500">
-                    AI CORE
-                  </span>
+                  <span className="text-[9px] text-slate-500">AI CORE</span>
 
                   <span className="text-[9px] font-bold text-[#C81C33]">
-                    98.4%
+                    ACTIVE
                   </span>
                 </div>
               </motion.div>
@@ -466,22 +449,14 @@ export default function Hero() {
    META ITEM
 ============================================================ */
 
-function MetaItem({
-  label,
-  value,
-}: {
-  label: string;
-  value: string;
-}) {
+function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
       <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-slate-400">
         {label}
       </p>
 
-      <p className="mt-1 text-xs font-semibold text-[#0B0F19]">
-        {value}
-      </p>
+      <p className="mt-1 text-xs font-semibold text-[#0B0F19]">{value}</p>
     </div>
   );
 }
