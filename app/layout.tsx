@@ -12,10 +12,59 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://wyvernstack.com";
+
+const isProduction =
+  process.env.NEXT_PUBLIC_SITE_ENV === "production";
+
 export const metadata: Metadata = {
-  title: "Wyvernstack",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Wyvernstack | Digital Products, Websites & SaaS",
+    template: "%s | Wyvernstack",
+  },
+
   description:
-    "WYVERNSTACK is an AI-powered web engineering partner for high-performance digital products.",
+    "Wyvernstack is a digital technology studio building high-performance websites, SaaS products, platforms, and intelligent digital experiences for businesses.",
+
+  robots: isProduction
+    ? {
+        index: true,
+        follow: true,
+      }
+    : {
+        index: false,
+        follow: false,
+      },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Wyvernstack | Digital Products, Websites & SaaS",
+    description:
+      "Wyvernstack is a digital technology studio building high-performance websites, SaaS products, platforms, and intelligent digital experiences for businesses.",
+    url: siteUrl,
+    siteName: "Wyvernstack",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Wyvernstack | Digital Products, Websites & SaaS",
+    description:
+      "Wyvernstack is a digital technology studio building high-performance websites, SaaS products, platforms, and intelligent digital experiences for businesses.",
+  },
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
